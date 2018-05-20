@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="1" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="2" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -742,7 +742,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="30.0"/>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="40.0"/>
         <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
       </costs>
     </selectionEntry>
