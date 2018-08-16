@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="3" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="4" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1072,7 +1072,10 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -1083,6 +1086,66 @@
       <costs>
         <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
         <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1ef7-5239-685e-10a7" name="Heavy Truck" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="4736-77ae-0c18-656c" name="Heavy Truck" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Heavyweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="14"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="2"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="3"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="4"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="c627-77e0-8e59-96d9" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="0879-77ca-7b96-2770" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="5">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="766e-4010-0580-322d" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="25.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1209,6 +1272,7 @@
               <entryLinks/>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="2cb4-4b09-0b1e-0154" name="Cluster Bombs" hidden="false" collective="false" type="upgrade">
@@ -1223,6 +1287,7 @@
               <entryLinks/>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9616-1553-edcf-11ad" name="Prison Car" hidden="true" collective="false" type="upgrade">
@@ -1259,7 +1324,10 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -2185,6 +2253,7 @@
               <entryLinks/>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="6.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7f7e-9d7e-bbbf-f30c" name="Sentry Gun" hidden="false" collective="false" type="upgrade">
@@ -2199,6 +2268,7 @@
               <entryLinks/>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3ffe-ae1d-5b03-f28c" name="Gas Grenades" hidden="false" collective="false" type="upgrade">
@@ -2213,6 +2283,7 @@
               <entryLinks/>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2239,6 +2310,7 @@
                   <entryLinks/>
                   <costs>
                     <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
+                    <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="35d2-cdb7-c640-958e" name="Rifle" hidden="false" collective="false" type="upgrade">
@@ -2253,6 +2325,7 @@
                   <entryLinks/>
                   <costs>
                     <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                    <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="350f-8e8d-2127-c597" name="Shotgun" hidden="false" collective="false" type="upgrade">
@@ -2267,6 +2340,7 @@
                   <entryLinks/>
                   <costs>
                     <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="3.0"/>
+                    <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="36f2-b284-4de8-e931" name="Submachine Guns" hidden="false" collective="false" type="upgrade">
@@ -2281,6 +2355,7 @@
                   <entryLinks/>
                   <costs>
                     <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="6.0"/>
+                    <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
