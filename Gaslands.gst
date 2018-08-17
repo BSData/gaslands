@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="4" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="5" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -431,7 +431,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="1">
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2">
               <repeats/>
               <conditions/>
               <conditionGroups/>
