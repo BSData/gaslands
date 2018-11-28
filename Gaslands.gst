@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="6" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="7" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -305,9 +305,9 @@
         <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5fc8-4273-0b18-c611" name="Car / Jeep" hidden="false" collective="false" type="model">
+    <selectionEntry id="5fc8-4273-0b18-c611" name="Car" hidden="false" collective="false" type="model">
       <profiles>
-        <profile id="34bf-184a-b561-b5d1" name="Car / Jeep" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+        <profile id="34bf-184a-b561-b5d1" name="Car" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -381,9 +381,9 @@
         <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b242-a818-85e6-b6db" name="Buggy / Trike / Bike &amp; Sidecar" hidden="false" collective="false" type="model">
+    <selectionEntry id="b242-a818-85e6-b6db" name="Buggy / Trike" hidden="false" collective="false" type="model">
       <profiles>
-        <profile id="448a-effe-d0a9-b58c" name="Buggy / Trike / Bike &amp; Sidecar" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+        <profile id="448a-effe-d0a9-b58c" name="Buggy / Trike" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1068,7 +1068,15 @@
               <infoLinks/>
               <modifiers/>
               <constraints/>
-              <categoryLinks/>
+              <categoryLinks>
+                <categoryLink id="7712-99c1-1ef8-c84e" name="Sponsor" hidden="false" targetId="6b0c-dbca-afd2-7a45" primary="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -1076,6 +1084,180 @@
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry id="dedc-2c1b-1abe-00e2" name="Highway Patrol" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="f1bd-9651-05cf-2e2d" name="Sponsor" hidden="false" targetId="6b0c-dbca-afd2-7a45" primary="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+            <selectionEntry id="f2ee-b094-5883-c9ee" name="Custom" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="a40a-1747-b018-3136" name="Perks" hidden="false" collective="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2997-6b0c-0076-d6e9" type="max"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddd9-31b2-003c-4c02" type="min"/>
+                  </constraints>
+                  <categoryLinks/>
+                  <selectionEntries>
+                    <selectionEntry id="135b-c980-8b7e-cc9f" name="Badass" book="" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a274-d286-b087-6f4b" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="c626-3c9e-3d9b-6c75" name="Aggression" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc0f-6679-28f5-016a" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="b9aa-5dc0-e208-5831" name="Daring" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db5f-69c0-ac63-a7b3" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="c1a0-8430-610a-8a83" name="Military" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1541-f5cd-4d7e-3b68" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="a1c8-2e30-e885-9a9f" name="Speed" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d35-d496-f981-906c" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="6c3c-c635-28b4-e819" name="Pursuit" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b809-32ef-4e2d-b54f" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="1d46-f710-a188-9813" name="Precision" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df1-54b4-d2e7-b218" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="c7a7-6f7e-bf77-e964" name="Tuning" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55a4-8477-e706-8f35" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="9c5d-00ed-e27f-d508" name="Technology" hidden="false" collective="false" type="upgrade">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b928-11df-a83b-2ace" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <selectionEntryGroups/>
+                  <entryLinks/>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks/>
+              <costs/>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -1106,7 +1288,20 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f324-d908-797f-872a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks>
         <categoryLink id="c627-77e0-8e59-96d9" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
@@ -1145,6 +1340,541 @@
       </entryLinks>
       <costs>
         <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="25.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8847-cf34-415b-e9e0" name="Drag Racer" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="cbb3-313a-089c-1e6f" name="Drag Racer" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Lightweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="4"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="4"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="6"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="1"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="2357-f629-c72d-de69" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="981a-f446-57e2-dc62" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="3e9b-4d9a-6651-0963" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="5.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e963-efe5-63a4-a278" name="Bike with Sidecar" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="334c-8836-2795-9024" name="Bike with Sidecar" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Lightweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="4"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="5"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="6"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="ddf3-3885-31c5-aa22" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="0970-ef37-2c4d-85e1" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="d4a9-ef8e-2882-0dfd" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="8.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6682-7091-0233-0818" name="Ice Cream Truck" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="4254-127b-1927-240c" name="Ice Cream Truck" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="decrement" field="a05d-324a-bd1a-767e" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="6682-7091-0233-0818" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Middleweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="10"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="3"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="4"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="91a9-beed-6d55-d7ea" value="5">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="6682-7091-0233-0818" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="8b84-bb21-dbb6-26a7" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="8f46-74bc-6d0a-2264" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="8688-89bd-858a-94f4" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="5.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1f45-f8d1-c8d6-385b" name="Jeep" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="79f9-bf32-7a8d-a4d7" name="Jeep" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="decrement" field="a05d-324a-bd1a-767e" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="1f45-f8d1-c8d6-385b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Middleweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="10"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="3"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="5"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="decrement" field="91a9-beed-6d55-d7ea" value="4">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="1f45-f8d1-c8d6-385b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="0829-726a-463a-bd83" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="2215-5e95-c74c-b725" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="65c7-586f-788c-36f9" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="15.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8f6d-bc80-86c2-2114" name="Ambulance" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="ac1e-9341-ccfd-bad1" name="Ambulance" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="decrement" field="a05d-324a-bd1a-767e" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="8f6d-bc80-86c2-2114" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Middleweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="12"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="2"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="5"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="decrement" field="91a9-beed-6d55-d7ea" value="4">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="8f6d-bc80-86c2-2114" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f324-d908-797f-872a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="635a-7f0c-a224-80d7" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="d2d0-409b-7b59-a8ae" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="b9ba-23ae-25c2-9f22" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="25.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b75b-3bdd-287f-c5cb" name="Motorhome" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="516d-cb47-ed55-4679" name="Motorhome" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="decrement" field="a05d-324a-bd1a-767e" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="b75b-3bdd-287f-c5cb" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Middleweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="10"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="3"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="4"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="decrement" field="91a9-beed-6d55-d7ea" value="4">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="b75b-3bdd-287f-c5cb" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="9dac-96ac-9012-8a00" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="7356-fe0a-a254-ec7f" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="48f1-f32e-06fc-d290" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="25.0"/>
+        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8de2-f207-070f-a4a5" name="APC" hidden="false" collective="false" type="model">
+      <profiles>
+        <profile id="c0c6-de52-6cca-3ec6" name="APC" hidden="false" profileTypeId="e5e1-86e0-5830-ebf3" profileTypeName="Vehicle">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Weight" characteristicTypeId="4efa-dfe3-7fb1-23fa" value="Heavyweight"/>
+            <characteristic name="Hull Points" characteristicTypeId="a05d-324a-bd1a-767e" value="16"/>
+            <characteristic name="Handling" characteristicTypeId="6748-870d-e310-84fa" value="3"/>
+            <characteristic name="Max Gear" characteristicTypeId="3c64-20de-b449-9e2a" value="4"/>
+            <characteristic name="Crew" characteristicTypeId="4fe3-cc78-baa4-a7ad" value="6"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f324-d908-797f-872a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="795a-a081-51b6-96e8" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="7927-dde7-2e12-31ae" name="Options" hidden="false" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="1">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="df7e-9f64-ea90-2087" name="Driver Perks" hidden="false" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="35.0"/>
         <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
       </costs>
     </selectionEntry>
@@ -2427,6 +3157,7 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff0d-40bb-7461-43f8" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ee0-a644-dcdd-2ec2" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d82a-5237-2a8f-2af9" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c626-3c9e-3d9b-6c75" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -2554,6 +3285,7 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c5d-00ed-e27f-d508" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -2682,6 +3414,8 @@
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a2d-ea1c-ee35-aa8e" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ee0-a644-dcdd-2ec2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dedc-2c1b-1abe-00e2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1c8-2e30-e885-9a9f" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -2810,6 +3544,7 @@
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f324-d908-797f-872a" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a2d-ea1c-ee35-aa8e" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1d46-f710-a188-9813" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -2938,6 +3673,7 @@
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c1a0-8430-610a-8a83" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -3065,6 +3801,7 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f324-d908-797f-872a" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9aa-5dc0-e208-5831" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -3193,6 +3930,7 @@
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff0d-40bb-7461-43f8" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="135b-c980-8b7e-cc9f" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -3320,6 +4058,7 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d82a-5237-2a8f-2af9" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7a7-6f7e-bf77-e964" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -3421,6 +4160,134 @@
               <modifiers/>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d23b-1622-ae90-a5e8" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3dca-e372-4e41-d372" name="Pursuit" hidden="true" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dedc-2c1b-1abe-00e2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c3c-c635-28b4-e819" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="4f2c-456c-38fb-d7da" name="On Your Tail" book="TX3" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3b3-3a08-0ba1-7425" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1b17-18e8-4b05-e7b5" name="Taunt" book="TX3" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe3b-d298-9468-610b" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="40ce-ea27-0bb0-9a01" name="Schadenfreude" book="TX3" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6d9-0773-7024-949d" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3b93-43ed-6c33-7477" name="PIT" book="TX3" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="315c-8cf6-b4d9-a8e1" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="4.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d4cd-0d87-5cc7-fd9f" name="Unnerving Eye Contact" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d86d-4a9e-db94-1ad1" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="5.0"/>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ba0a-535e-b1dd-1b89" name="Out Run" book="TX3" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4888-44ff-0c61-3ced" type="max"/>
               </constraints>
               <categoryLinks/>
               <selectionEntries/>
