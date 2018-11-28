@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="7" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="8" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1103,7 +1103,10 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="f2ee-b094-5883-c9ee" name="Custom" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -1137,7 +1140,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="c626-3c9e-3d9b-6c75" name="Aggression" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1151,7 +1157,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="b9aa-5dc0-e208-5831" name="Daring" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1165,7 +1174,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="c1a0-8430-610a-8a83" name="Military" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1179,7 +1191,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="a1c8-2e30-e885-9a9f" name="Speed" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1193,7 +1208,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="6c3c-c635-28b4-e819" name="Pursuit" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1207,7 +1225,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="1d46-f710-a188-9813" name="Precision" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1221,7 +1242,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="c7a7-6f7e-bf77-e964" name="Tuning" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1235,7 +1259,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="9c5d-00ed-e27f-d508" name="Technology" hidden="false" collective="false" type="upgrade">
                       <profiles/>
@@ -1249,7 +1276,10 @@
                       <selectionEntries/>
                       <selectionEntryGroups/>
                       <entryLinks/>
-                      <costs/>
+                      <costs>
+                        <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                        <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups/>
@@ -1257,7 +1287,10 @@
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -3414,7 +3447,7 @@
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a2d-ea1c-ee35-aa8e" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ee0-a644-dcdd-2ec2" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dedc-2c1b-1abe-00e2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dedc-2c1b-1abe-00e2" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1c8-2e30-e885-9a9f" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
