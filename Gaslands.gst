@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="11" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="12" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2108,7 +2108,15 @@
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="3a98-ecf1-f9c1-532d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints/>
               <categoryLinks/>
               <selectionEntries/>
@@ -4401,7 +4409,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0dfa-0028-0e0a-49c9" name="Side" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4413,7 +4424,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="d218-18ba-73b0-34e2" name="Rear" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4425,7 +4439,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="bab2-4a49-836f-eee7" name="Turret (Cans x3)" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4451,7 +4468,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
