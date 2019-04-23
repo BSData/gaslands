@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="11" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="13" battleScribeVersion="2.01" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2108,7 +2108,15 @@
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="3a98-ecf1-f9c1-532d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints/>
               <categoryLinks/>
               <selectionEntries/>
@@ -2329,7 +2337,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="b779-caad-edc2-ecc9" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2344,7 +2361,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="3742-13ef-61ed-3cb7" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="1.0"/>
@@ -2359,7 +2385,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="ec1b-a7d7-d592-768a" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="1.0"/>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
@@ -2374,7 +2409,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="ced9-49c1-2983-1129" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="1.0"/>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
@@ -2389,7 +2433,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="c4c2-90b2-77f6-a271" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2972,7 +3025,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="f3d8-c4b2-4e1a-850b" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="6.0"/>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2987,24 +3049,18 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="c59f-49c7-94fe-7c85" name="Mounting" hidden="false" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="2.0"/>
-                <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3ffe-ae1d-5b03-f28c" name="Gas Grenades" hidden="false" collective="false" type="upgrade">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
@@ -4401,7 +4457,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0dfa-0028-0e0a-49c9" name="Side" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4413,7 +4472,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="d218-18ba-73b0-34e2" name="Rear" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4425,7 +4487,10 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="bab2-4a49-836f-eee7" name="Turret (Cans x3)" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4451,7 +4516,55 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b72d-7f13-d76f-1460" name="Mounting" hidden="false" collective="false" defaultSelectionEntryId="88b8-fba6-ddce-0ef6">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b21a-8ead-0b3e-dbaa" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36e8-5ade-0a53-6810" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="a645-da27-8f5f-a18a" name="Side" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="88b8-fba6-ddce-0ef6" name="Rear" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="Build Points" costTypeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" costTypeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
