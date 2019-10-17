@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="14" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="15" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="55c7-45e5-pubEL3DK" name="TX3"/>
   </publications>
@@ -35,6 +35,10 @@
   <categoryEntries>
     <categoryEntry id="fcb8-8c55-ab34-03d1" name="Vehicle" hidden="false"/>
     <categoryEntry id="6b0c-dbca-afd2-7a45" name="Sponsor" hidden="false"/>
+    <categoryEntry id="d4f7-0b52-6568-ee8f" name="Lightweight" hidden="false"/>
+    <categoryEntry id="96a0-cfb4-47ee-0a2f" name="Middleweight" hidden="false"/>
+    <categoryEntry id="3e72-1039-e998-bd5a" name="Heavyweight" hidden="false"/>
+    <categoryEntry id="39da-2a47-c4bf-ba33" name="Flying" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="60bf-0f00-db63-fb4e" name="Team" hidden="false">
@@ -73,6 +77,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="1fb1-19a1-7851-520a" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="7ec7-0443-2799-63ed" name="Lightweight" hidden="false" targetId="d4f7-0b52-6568-ee8f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="7140-af92-4f58-2089" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -112,6 +117,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="8763-0150-0593-ea93" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="7115-8178-a946-e0c5" name="Heavyweight" hidden="false" targetId="3e72-1039-e998-bd5a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="8cd4-16a4-251a-649c" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -120,6 +126,7 @@
           </modifiers>
         </entryLink>
         <entryLink id="60c9-4ba2-0244-2dc5" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
+        <entryLink id="b6d6-9437-9541-717c" name="Trailer Upgrades" hidden="false" collective="false" import="true" targetId="04c4-0e9f-556b-817c" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="40.0"/>
@@ -151,11 +158,22 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="7003-7a9e-8d3f-4151" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="c22a-bdbd-dcaf-30e0" name="Heavyweight" hidden="false" targetId="3e72-1039-e998-bd5a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="4bbd-1803-65c5-1bdd" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36d8-6a63-8ac4-d919" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="15a1-d338-8623-bc26" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -167,7 +185,7 @@
     </selectionEntry>
     <selectionEntry id="5fc8-4273-0b18-c611" name="Car" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="decrement" field="91a9-beed-6d55-d7ea" value="4">
+        <modifier type="decrement" field="91a9-beed-6d55-d7ea" value="4.0">
           <conditions>
             <condition field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
           </conditions>
@@ -193,11 +211,17 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="b62b-24c2-ac9c-cde8" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="18a9-8c9d-3909-f319" name="Middleweight" hidden="false" targetId="96a0-cfb4-47ee-0a2f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="101c-f2ec-ca46-6094" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2"/>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2.0"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="4931-d253-cb52-cee9" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -232,6 +256,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="a782-4dbd-d106-7293" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="dca2-00ce-51b0-6e64" name="Lightweight" hidden="false" targetId="d4f7-0b52-6568-ee8f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="3c6e-fdb3-7345-4ebd" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -260,11 +285,22 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="a438-4dd9-a586-5aa8" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="8353-4d3f-c166-b4c7" name="Heavyweight" hidden="false" targetId="3e72-1039-e998-bd5a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="7a24-501b-6c12-29c3" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2"/>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2.0"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36d8-6a63-8ac4-d919" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="433e-4d58-962b-3d56" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -302,11 +338,17 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="0476-8a38-5a47-db33" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="8f01-b99a-bcd4-ff56" name="Middleweight" hidden="false" targetId="96a0-cfb4-47ee-0a2f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="63ff-d6ab-3570-b6b5" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="4eb3-957b-acec-690a" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -353,11 +395,17 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="6573-64d1-80c4-b81f" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="90bf-e1b9-27e8-bc8b" name="Middleweight" hidden="false" targetId="96a0-cfb4-47ee-0a2f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="0f6a-24f0-57e4-5dc9" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3"/>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3.0"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="59d0-adf4-9527-08d3" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -392,6 +440,8 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="3eb3-f785-6996-7eb4" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="5e37-9ab6-9d21-60c5" name="Middleweight" hidden="false" targetId="96a0-cfb4-47ee-0a2f" primary="false"/>
+        <categoryLink id="8661-622e-3682-5522" name="Flying" hidden="false" targetId="39da-2a47-c4bf-ba33" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="99cd-eec7-a819-5646" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -434,6 +484,8 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="72f7-279b-1a50-0992" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="9f4a-9500-f794-5a8a" name="Flying" hidden="false" targetId="39da-2a47-c4bf-ba33" primary="false"/>
+        <categoryLink id="9146-ece2-0090-a4ae" name="Heavyweight" hidden="false" targetId="3e72-1039-e998-bd5a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="90d5-22eb-7d59-c536" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -476,11 +528,22 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="683d-0da3-021d-4a3e" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="998b-c6af-ca65-e170" name="Heavyweight" hidden="false" targetId="3e72-1039-e998-bd5a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="cb3c-2686-8e43-d259" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="4"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36d8-6a63-8ac4-d919" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="5211-405a-d6d9-4f65" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -697,12 +760,42 @@
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="29ac-7abc-8785-5e73" name="Maxxine" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="549b-c1e3-0c08-8654" name="Verney" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="01e1-c249-57e0-1fde" name="New SelectionEntry" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="817e-017b-ec86-84e7" name="The Order of the Inferno" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="f9b4-d106-e12a-fb01" name="Beverly, The Devil on the Highway" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="e91f-341e-63b4-6539" name="Rusty&apos;s Bootleggers" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="29ac-7abc-8785-5e73" name="Maxxine" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="549b-c1e3-0c08-8654" name="Verney" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="01e1-c249-57e0-1fde" name="New SelectionEntry" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="817e-017b-ec86-84e7" name="The Order of the Inferno" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f9b4-d106-e12a-fb01" name="Beverly, The Devil on the Highway" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e91f-341e-63b4-6539" name="Rusty&apos;s Bootleggers" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -736,11 +829,22 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="c627-77e0-8e59-96d9" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="8cdc-99d4-ffbc-c207" name="Heavyweight" hidden="false" targetId="3e72-1039-e998-bd5a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="0879-77ca-7b96-2770" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="5"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36d8-6a63-8ac4-d919" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="766e-4010-0580-322d" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -775,6 +879,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="2357-f629-c72d-de69" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="9b71-ec03-76cb-0286" name="Lightweight" hidden="false" targetId="d4f7-0b52-6568-ee8f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="981a-f446-57e2-dc62" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -814,6 +919,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="ddf3-3885-31c5-aa22" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="5d3b-c501-17ba-eb81" name="Lightweight" hidden="false" targetId="d4f7-0b52-6568-ee8f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="0970-ef37-2c4d-85e1" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
@@ -856,11 +962,17 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="8b84-bb21-dbb6-26a7" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="3453-bc98-4232-84cd" name="Middleweight" hidden="false" targetId="96a0-cfb4-47ee-0a2f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="8f46-74bc-6d0a-2264" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3.0"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="8688-89bd-858a-94f4" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -907,11 +1019,17 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="635a-7f0c-a224-80d7" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
+        <categoryLink id="ce55-954c-99dc-eca9" name="Middleweight" hidden="false" targetId="96a0-cfb4-47ee-0a2f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="d2d0-409b-7b59-a8ae" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="3"/>
+            <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e44a-e5fc-d07b-86c5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="b9ba-23ae-25c2-9f22" name="Driver Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -963,6 +1081,19 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="31f8-993a-622a-e07c" name="Tank Tracks" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c3b-7e88-5b9a-51cd" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="93be-e146-d79b-13d6" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f964-c263-ff17-1fc5" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
@@ -1004,13 +1135,29 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="67db-8127-a7c6-429c" name="Experimental Nuclear Engine" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0925-cc18-b8da-5623" name="Experimental Teleporter" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="7.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4a80-bb42-9564-9009" name="Roll Cage" hidden="false" collective="false" import="true" type="upgrade">
@@ -1033,176 +1180,11 @@
               </modifiers>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c65e-c7b8-1665-3c96" name="Weapons" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="3a98-ecf1-f9c1-532d" name="Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
-                  <conditions>
-                    <condition field="selections" scope="3a98-ecf1-f9c1-532d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="1e09-00fa-4330-c3b7" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b541-e7e2-333c-f28d" name="Heavy Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12">
-                  <conditions>
-                    <condition field="selections" scope="b541-e7e2-333c-f28d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="89a1-f033-a102-9784" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1339-00e6-f503-c0dc" name="Mini-Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
-                  <conditions>
-                    <condition field="selections" scope="1339-00e6-f503-c0dc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="a95d-26da-6277-5a89" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="131c-787c-f4b3-1fec" name="125mm Cannon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
-                  <conditions>
-                    <condition field="selections" scope="131c-787c-f4b3-1fec" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="2149-a892-ea2b-52e1" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="3.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3f71-b66f-a64a-c69c" name="Rockets" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
-                  <conditions>
-                    <condition field="selections" scope="3f71-b66f-a64a-c69c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="c856-cc50-f8c0-81ce" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c22a-969b-6624-6abd" name="Flamethrower" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
-                  <conditions>
-                    <condition field="selections" scope="c22a-969b-6624-6abd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="98a7-c7ca-e207-2fc8" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c573-3532-756f-0d4d" name="Mortar" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12">
-                  <conditions>
-                    <condition field="selections" scope="c573-3532-756f-0d4d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="6d86-5a73-bbcc-9c96" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6e07-e8d0-458d-e603" name="Oil Slick Dropper" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="b779-caad-edc2-ecc9" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ce70-d4ee-2926-d9f4" name="Caltrop Dropper" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="3742-13ef-61ed-3cb7" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6ba3-1026-e65e-5759" name="Glue Dropper" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="ec1b-a7d7-d592-768a" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="24a6-601f-0f90-60fc" name="Mines" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="ced9-49c1-2983-1129" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4433-c764-cdba-f144" name="Smoke" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="c4c2-90b2-77f6-a271" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="02c0-1cb6-0786-9067" name="Ram" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9153-3768-2e17-d56e" name="Ram" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
-                  <conditions>
-                    <condition field="selections" scope="02c0-1cb6-0786-9067" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ee0-a644-dcdd-2ec2" type="equalTo"/>
@@ -1210,282 +1192,26 @@
                 </modifier>
               </modifiers>
               <entryLinks>
-                <entryLink id="9986-0330-3b30-d7d3" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+                <entryLink id="080a-0ddd-adb4-4c87" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
                 <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3a7a-52aa-0d3e-0245" name="Exploding Ram" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2b91-33e6-8d75-f45b" name="Exploding Ram" hidden="false" collective="false" import="true" type="upgrade">
               <entryLinks>
-                <entryLink id="05e9-7fa7-9b21-cb43" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9628-06e2-a39c-2f4c" name="Thumper" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
-                  <conditions>
-                    <condition field="selections" scope="9628-06e2-a39c-2f4c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="efac-f6f0-8a33-85a1" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4224-c335-bf42-703e" name="Arc Lightning Projector" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
-                  <conditions>
-                    <condition field="selections" scope="4224-c335-bf42-703e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="e154-329d-9ff8-f3b7" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b008-d46c-026b-a8a2" name="Kinetic Super Booster" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
-                  <conditions>
-                    <condition field="selections" scope="b008-d46c-026b-a8a2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="2820-54af-57de-fbf2" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f85a-9582-5cce-f59e" name="Magnetic Jammer" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="2e5b-67df-06ef-24a6" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ac7c-3f5b-be6d-4ebe" name="BFG" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7aa5-33a7-8a2f-4ba4" name="Combat Laser" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="6a5a-140e-c18b-2100" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ceda-f352-cdf7-c1a3" name="Death Ray" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="2d80-73b7-9a93-2837" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f85d-32cf-787a-6aff" name="Grav Gun" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
-                  <conditions>
-                    <condition field="selections" scope="f85d-32cf-787a-6aff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="f652-e5c8-891b-3070" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2dd0-65e3-0a0f-43d5" name="Grabber Arm" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="18.0">
-                  <conditions>
-                    <condition field="selections" scope="2dd0-65e3-0a0f-43d5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="b8a6-7cd0-ddb9-7d03" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3beb-1939-2626-ff98" name="Harpoon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
-                  <conditions>
-                    <condition field="selections" scope="3beb-1939-2626-ff98" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="fcec-1964-688b-28ea" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a204-06e2-c701-35dc" name="Wrecking Ball" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12">
-                  <conditions>
-                    <condition field="selections" scope="a204-06e2-c701-35dc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="ed56-1843-b117-b991" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8b4c-be0d-3599-5bf0" name="Wreck Lobber" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12">
-                  <conditions>
-                    <condition field="selections" scope="8b4c-be0d-3599-5bf0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="fca7-224f-7442-c320" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="4.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f135-e971-0c43-8068" name="RC Car Bombs" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="f3d8-c4b2-4e1a-850b" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+                <entryLink id="897f-2e54-bda5-8750" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7f7e-9d7e-bbbf-f30c" name="Sentry Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="c59f-49c7-94fe-7c85" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1b35-b051-1f45-7f19" name="Bazooka" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
-                  <conditions>
-                    <condition field="selections" scope="1b35-b051-1f45-7f19" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="aff9-3608-8784-a7ea" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="94ce-0ac3-8914-a8bf" name="Napalm Dropper" hidden="false" collective="false" import="true" type="upgrade">
-              <entryLinks>
-                <entryLink id="ff58-4432-6899-37cd" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="34ec-2b13-daeb-bb0e" name="Crew Fired Weapons" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="8471-9c50-719a-519a" name="Handgun (Pistol, Shotgun, etc.)" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="417a-733a-156b-420c" name="Grenades" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
@@ -1513,51 +1239,57 @@
             <selectionEntry id="cfa5-be45-8bb5-d46d" name="Blunderbuss" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9d3a-bf84-3c4b-b93c" name="Steel Nets" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="45e6-ba19-93e6-516f" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b90d-1355-95bd-ae3a" name="Submachine Guns" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="57f1-cdb8-2ef0-4e21" name="Specialist Weapons" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a6a-d326-f8da-4a11" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="6123-7329-ea38-2aeb" name="Steel Nets" hidden="false" collective="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
-                    <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="ce9f-fb40-b73e-6d36" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
-                    <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="7ecc-4e57-db4b-e190" name="Submachine Guns" hidden="false" collective="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
-                    <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </selectionEntryGroup>
         <selectionEntryGroup id="70d5-8038-b9eb-a390" name="Trailers" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e91f-341e-63b4-6539" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <modifierGroups>
             <modifierGroup>
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e91f-341e-63b4-6539" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e91f-341e-63b4-6539" type="equalTo"/>
               </conditions>
               <modifiers>
-                <modifier type="set" field="hidden" value="false"/>
+                <modifier type="set" field="2417-33c8-310a-9584" value="1.0"/>
+                <modifier type="set" field="75e1-2d98-2cdc-689e" value="1.0"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f64-cada-2175-b60e" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ce8-b1d4-8cf2-c54b" type="min"/>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2417-33c8-310a-9584" type="min"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75e1-2d98-2cdc-689e" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="df2c-181b-b7cf-92ac" name="Lightweight" hidden="false" collective="false" import="true" type="upgrade">
@@ -1566,27 +1298,56 @@
               </entryLinks>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e44a-e5fc-d07b-86c5" name="Middleweight" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4f7-0b52-6568-ee8f" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <entryLinks>
                 <entryLink id="0725-0a1a-784f-2561" name="Trailer Upgrades" hidden="false" collective="false" import="true" targetId="04c4-0e9f-556b-817c" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="8.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="36d8-6a63-8ac4-d919" name="Heavyweight" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="36d8-6a63-8ac4-d919" name="Heavyweight" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4f7-0b52-6568-ee8f" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="96a0-cfb4-47ee-0a2f" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <entryLinks>
                 <entryLink id="080d-bf4a-9ad6-6bea" name="Trailer Upgrades" hidden="false" collective="false" import="true" targetId="04c4-0e9f-556b-817c" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="12.0"/>
+                <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="89a2-0bf0-1d3d-5237" name="Weapons" hidden="false" collective="false" import="true" targetId="4c53-70ee-8e18-ea38" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="efd0-4e11-81a4-f448" name="Driver Perks" hidden="false" collective="false" import="true">
       <selectionEntries>
@@ -1699,20 +1460,6 @@
           </modifiers>
           <selectionEntries>
             <selectionEntry id="3735-6034-970a-0f22" name="Satellite Navigation" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5d8-cf00-181a-b503" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e963-efe5-63a4-a278" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b242-a818-85e6-b6db" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8847-cf34-415b-e9e0" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4c9-f21b-96b4-4c80" type="max"/>
               </constraints>
@@ -1775,7 +1522,6 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a2d-ea1c-ee35-aa8e" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ee0-a644-dcdd-2ec2" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dedc-2c1b-1abe-00e2" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1c8-2e30-e885-9a9f" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="817e-017b-ec86-84e7" type="equalTo"/>
@@ -2514,8 +2260,8 @@
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02c0-1cb6-0786-9067" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3a7a-52aa-0d3e-0245" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9153-3768-2e17-d56e" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b91-33e6-8d75-f45b" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2525,6 +2271,18 @@
             <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
             <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="ee5e-6e95-3baa-a7e3" name="Free Turret (1 per tank)" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c3b-7e88-5b9a-51cd" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cfe-8e44-cb4d-9f70" type="max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2548,17 +2306,504 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="04c4-0e9f-556b-817c" name="Trailer Upgrades" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="04c4-0e9f-556b-817c" name="Trailer Upgrades" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e91f-341e-63b4-6539" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e85-f51d-1c04-5946" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d961-7bea-d1e8-d45c" type="min"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e2af-c436-8e6e-c169" name="Peach Moonshine" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="1a3d-67f4-ee2a-3333" name="Old Fashioned Corn Liquor" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="fbbe-d22b-a7d0-d160" name="Siphon Pump" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="bebf-90b4-4d8b-571b" name="Cattle-hammer" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="1179-7244-1ba5-d001" name="Sourmash Jet Booster" hidden="false" collective="false" import="true" type="upgrade"/>
+        <selectionEntry id="e2af-c436-8e6e-c169" name="Peach Moonshine" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1a3d-67f4-ee2a-3333" name="Old Fashioned Corn Liquor" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fbbe-d22b-a7d0-d160" name="Siphon Pump" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bebf-90b4-4d8b-571b" name="Cattle-hammer" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1179-7244-1ba5-d001" name="Sourmash Jet Booster" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="4c53-70ee-8e18-ea38" name="Weapons" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="bbee-877e-1934-1980" name="Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
+              <conditions>
+                <condition field="selections" scope="bbee-877e-1934-1980" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="29b4-45a3-7c49-8a99" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2930-d6e5-b4c6-1768" name="Heavy Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12">
+              <conditions>
+                <condition field="selections" scope="2930-d6e5-b4c6-1768" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="c898-d3bd-e3c5-4998" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cfd0-bc98-e1d7-adc5" name="Mini-Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
+              <conditions>
+                <condition field="selections" scope="cfd0-bc98-e1d7-adc5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="4bb1-afe0-03de-86f6" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e82d-d828-cef0-9c8a" name="125mm Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="18.0">
+              <conditions>
+                <condition field="selections" scope="e82d-d828-cef0-9c8a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="dff0-f017-8e97-91ec" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="3.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="93be-19a1-2779-2ec9" name="Rockets" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="15.0">
+              <conditions>
+                <condition field="selections" scope="93be-19a1-2779-2ec9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="7654-fbf7-d0ce-9872" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5e85-a1cb-a700-ddcb" name="Flamethrower" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
+              <conditions>
+                <condition field="selections" scope="5e85-a1cb-a700-ddcb" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="6f50-45b4-ea34-86dd" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="40de-1fd4-a9d3-841e" name="Mortar" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
+              <conditions>
+                <condition field="selections" scope="40de-1fd4-a9d3-841e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="6411-43a5-2367-d010" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8880-ba02-14e9-0bf7" name="Oil Slick Dropper" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="b938-b002-21d3-0ee4" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="42f9-e154-744f-c0ac" name="Caltrop Dropper" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="cdc2-4ad4-522c-318f" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1ef3-ca39-1c92-ef2d" name="Glue Dropper" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="6838-185e-639e-681a" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3cf4-a6ad-70ec-4db2" name="Mines" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="7b67-5c84-1709-5f40" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1396-2873-2d1c-b70d" name="Smoke" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="7b29-61ec-f6ed-6945" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5e3b-4440-b733-2256" name="Ram" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
+              <conditions>
+                <condition field="selections" scope="5e3b-4440-b733-2256" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ee0-a644-dcdd-2ec2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="4116-71da-c5d1-1692" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="08cd-a900-0ac5-63e0" name="Exploding Ram" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="f016-4015-9250-6830" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2e21-e094-c441-30ad" name="Thumper" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="89e1-99a7-305e-11c9" name="Arc Lightning Projector" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="18.0">
+              <conditions>
+                <condition field="selections" scope="89e1-99a7-305e-11c9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="42e1-e8ad-8e74-9e40" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="323c-2c88-08e6-714f" name="Kinetic Super Booster" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
+              <conditions>
+                <condition field="selections" scope="323c-2c88-08e6-714f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="ec85-abf0-0257-4846" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="08b0-0720-b54d-aef6" name="Magnetic Jammer" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="1494-d2b3-d2d2-2454" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="14a8-4e6a-7ad4-366c" name="BFG" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6a46-ab08-6a7a-c509" name="Combat Laser" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="e5cf-ae0a-052f-e5dd" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9069-f2bf-9940-dee3" name="Death Ray" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="2f46-00f2-15e8-af68" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6f67-4786-8fa2-8eb0" name="Grav Gun" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="6.0">
+              <conditions>
+                <condition field="selections" scope="6f67-4786-8fa2-8eb0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="0825-382b-f601-4470" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="638a-260f-6544-f363" name="Grabber Arm" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="18.0">
+              <conditions>
+                <condition field="selections" scope="638a-260f-6544-f363" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="a0ef-a722-7a81-c5f3" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="27c3-73d9-0d54-57b1" name="Harpoon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="6">
+              <conditions>
+                <condition field="selections" scope="27c3-73d9-0d54-57b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="c8f1-a72a-09ed-e963" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5c7c-bd3a-cc4c-9ff0" name="Wrecking Ball" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
+              <conditions>
+                <condition field="selections" scope="5c7c-bd3a-cc4c-9ff0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="5198-5606-15f0-bdb0" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3141-07d0-5bf4-f124" name="Wreck Lobber" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
+              <conditions>
+                <condition field="selections" scope="3141-07d0-5bf4-f124" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="394e-0da3-e998-406e" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="4.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0749-5783-ebb1-8e37" name="RC Car Bombs" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="8a69-1562-81f8-3f59" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="da2d-caa0-1491-b8b6" name="Sentry Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="0625-f79b-6414-9693" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="db52-7fd7-a990-faaa" name="Bazooka" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12.0">
+              <conditions>
+                <condition field="selections" scope="db52-7fd7-a990-faaa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="06d0-d832-0866-b867" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f3d0-4f11-060b-9f57" name="Napalm Dropper" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="7f92-2363-815f-8f69" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cfe3-bc6a-1d73-48f3" name="Wall of Amplifiers" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="3.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
