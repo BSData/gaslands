@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="15" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="16" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="55c7-45e5-pubEL3DK" name="TX3"/>
   </publications>
@@ -2283,6 +2283,10 @@
           <constraints>
             <constraint field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cfe-8e44-cb4d-9f70" type="max"/>
           </constraints>
+          <costs>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2391,7 +2395,7 @@
         </selectionEntry>
         <selectionEntry id="cfd0-bc98-e1d7-adc5" name="Mini-Gun" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="91a9-beed-6d55-d7ea" value="18">
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="15.0">
               <conditions>
                 <condition field="selections" scope="cfd0-bc98-e1d7-adc5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
               </conditions>
@@ -2638,6 +2642,13 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="6a46-ab08-6a7a-c509" name="Combat Laser" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="15.0">
+              <conditions>
+                <condition field="selections" scope="6a46-ab08-6a7a-c509" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <entryLinks>
             <entryLink id="e5cf-ae0a-052f-e5dd" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2725,7 +2736,7 @@
           </entryLinks>
           <costs>
             <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
-            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3141-07d0-5bf4-f124" name="Wreck Lobber" hidden="false" collective="false" import="true" type="upgrade">
@@ -2787,18 +2798,7 @@
             <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="1.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cfe3-bc6a-1d73-48f3" name="Wall of Amplifiers" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="cfe3-bc6a-1d73-48f3" name="Wall of Amplifiers" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="3.0"/>
             <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
