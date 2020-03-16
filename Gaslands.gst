@@ -1250,7 +1250,7 @@
             </selectionEntry>
             <selectionEntry id="45e6-ba19-93e6-516f" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
-                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
@@ -2379,7 +2379,7 @@
         </selectionEntry>
         <selectionEntry id="2930-d6e5-b4c6-1768" name="Heavy Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="91a9-beed-6d55-d7ea" value="12">
+            <modifier type="set" field="91a9-beed-6d55-d7ea" value="9">
               <conditions>
                 <condition field="selections" scope="2930-d6e5-b4c6-1768" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bab2-4a49-836f-eee7" type="equalTo"/>
               </conditions>
