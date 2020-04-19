@@ -2637,7 +2637,7 @@
         </selectionEntry>
         <selectionEntry id="14a8-4e6a-7ad4-366c" name="BFG" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
-            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="2.0"/>
+            <cost name="Build Points" typeId="ba54-acdf-648d-86c5" value="3.0"/>
             <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
           </costs>
         </selectionEntry>
