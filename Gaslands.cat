@@ -1,177 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0139-7751-4542-5c90" name="Gaslands" revision="3" battleScribeVersion="2.01" gameSystemId="55c7-45e5-b4ec-d17c" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <profiles/>
-  <rules/>
-  <infoLinks/>
-  <costTypes/>
-  <profileTypes/>
-  <categoryEntries/>
-  <forceEntries/>
-  <selectionEntries/>
+<catalogue id="0139-7751-4542-5c90" name="Gaslands" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="55c7-45e5-b4ec-d17c" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <publications>
+    <publication id="0139-7751-pubN65785" name="TX3"/>
+  </publications>
   <entryLinks>
-    <entryLink id="dcb1-8c0e-c647-a042" name="Bike" hidden="false" targetId="b5d8-cf00-181a-b503" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="9f49-c392-c136-6351" name="Buggy / Trike / Bike &amp; Sidecar" hidden="false" targetId="b242-a818-85e6-b6db" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="4cea-7fd4-5ef2-fc20" name="Bus / Coach" hidden="false" targetId="97fe-b03b-81d4-936f" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="ebb5-bde6-e221-9acc" name="Car / Jeep" hidden="false" targetId="5fc8-4273-0b18-c611" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="74fb-9508-ed15-1ad8" name="Monster Truck" hidden="false" targetId="c596-f85f-ae8b-fa32" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="4cb2-7fe9-0956-2d90" name="Performance Car" hidden="false" targetId="c4d1-c411-d2c4-c182" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="c998-86ca-6c3e-a3fa" name="Pickup Truck / Van / Tractor" hidden="false" targetId="de6f-4971-d7ee-d6ea" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="d654-0e96-f231-fcd8" name="War Rig" hidden="false" targetId="94de-e05a-c0db-5fb6" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="a47e-3d50-44dd-f26b" name="Gyrocopter" hidden="false" targetId="f964-c263-ff17-1fc5" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="8981-6383-68e6-d8b5" name="Helicopter" hidden="false" targetId="93be-e146-d79b-13d6" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="39ce-de91-63ff-f7f7" name="Tank" hidden="false" targetId="5c3b-7e88-5b9a-51cd" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="7455-b8bb-c026-47f5" name="Heavy Truck" book="TX3" hidden="false" targetId="1ef7-5239-685e-10a7" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
+    <entryLink id="dcb1-8c0e-c647-a042" name="Bike" hidden="false" collective="false" import="true" targetId="b5d8-cf00-181a-b503" type="selectionEntry"/>
+    <entryLink id="9f49-c392-c136-6351" name="Buggy / Trike / Bike &amp; Sidecar" hidden="false" collective="false" import="true" targetId="b242-a818-85e6-b6db" type="selectionEntry"/>
+    <entryLink id="4cea-7fd4-5ef2-fc20" name="Bus / Coach" hidden="false" collective="false" import="true" targetId="97fe-b03b-81d4-936f" type="selectionEntry"/>
+    <entryLink id="ebb5-bde6-e221-9acc" name="Car / Jeep" hidden="false" collective="false" import="true" targetId="5fc8-4273-0b18-c611" type="selectionEntry"/>
+    <entryLink id="74fb-9508-ed15-1ad8" name="Monster Truck" hidden="false" collective="false" import="true" targetId="c596-f85f-ae8b-fa32" type="selectionEntry"/>
+    <entryLink id="4cb2-7fe9-0956-2d90" name="Performance Car" hidden="false" collective="false" import="true" targetId="c4d1-c411-d2c4-c182" type="selectionEntry"/>
+    <entryLink id="c998-86ca-6c3e-a3fa" name="Pickup Truck / Van / Tractor" hidden="false" collective="false" import="true" targetId="de6f-4971-d7ee-d6ea" type="selectionEntry"/>
+    <entryLink id="d654-0e96-f231-fcd8" name="War Rig" hidden="false" collective="false" import="true" targetId="94de-e05a-c0db-5fb6" type="selectionEntry"/>
+    <entryLink id="a47e-3d50-44dd-f26b" name="Gyrocopter" hidden="false" collective="false" import="true" targetId="f964-c263-ff17-1fc5" type="selectionEntry"/>
+    <entryLink id="8981-6383-68e6-d8b5" name="Helicopter" hidden="false" collective="false" import="true" targetId="93be-e146-d79b-13d6" type="selectionEntry"/>
+    <entryLink id="39ce-de91-63ff-f7f7" name="Tank" hidden="false" collective="false" import="true" targetId="5c3b-7e88-5b9a-51cd" type="selectionEntry"/>
+    <entryLink id="7455-b8bb-c026-47f5" name="Heavy Truck" publicationId="0139-7751-pubN65785" hidden="false" collective="false" import="true" targetId="1ef7-5239-685e-10a7" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="ad80-e22f-0c71-6363" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
+        <categoryLink id="ad80-e22f-0c71-6363" name="New CategoryLink" hidden="false" targetId="fcb8-8c55-ab34-03d1" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="a05e-6696-b9bb-8566" name="Ambulance" book="TX3" hidden="false" targetId="8f6d-bc80-86c2-2114" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="efa3-127f-8980-63cb" name="APC" book="TX3" hidden="false" targetId="8de2-f207-070f-a4a5" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="67bd-5927-c36c-65b5" name="Bike with Sidecar" book="TX3" hidden="false" targetId="e963-efe5-63a4-a278" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="1353-1732-b9db-4148" name="Drag Racer" hidden="false" targetId="8847-cf34-415b-e9e0" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="1b19-e069-376a-ecaa" name="Ice Cream Truck" book="TX3" hidden="false" targetId="6682-7091-0233-0818" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="9e52-db0f-404b-1aee" name="Motorhome" book="TX3" hidden="false" targetId="b75b-3bdd-287f-c5cb" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
-    <entryLink id="99e8-8893-c596-4a26" name="Jeep" book="TX3" hidden="false" targetId="1f45-f8d1-c8d6-385b" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-    </entryLink>
+    <entryLink id="a05e-6696-b9bb-8566" name="Ambulance" publicationId="0139-7751-pubN65785" hidden="false" collective="false" import="true" targetId="8f6d-bc80-86c2-2114" type="selectionEntry"/>
+    <entryLink id="67bd-5927-c36c-65b5" name="Bike with Sidecar" publicationId="0139-7751-pubN65785" hidden="false" collective="false" import="true" targetId="e963-efe5-63a4-a278" type="selectionEntry"/>
+    <entryLink id="1353-1732-b9db-4148" name="Drag Racer" hidden="false" collective="false" import="true" targetId="8847-cf34-415b-e9e0" type="selectionEntry"/>
+    <entryLink id="1b19-e069-376a-ecaa" name="Ice Cream Truck" publicationId="0139-7751-pubN65785" hidden="false" collective="false" import="true" targetId="6682-7091-0233-0818" type="selectionEntry"/>
   </entryLinks>
-  <sharedSelectionEntries/>
-  <sharedSelectionEntryGroups/>
-  <sharedRules/>
-  <sharedProfiles/>
 </catalogue>
