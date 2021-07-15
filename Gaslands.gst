@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="19" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="20" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="55c7-45e5-pubEL3DK" name="TX3"/>
+    <publication id="a0bf-31f8-e06a-12f0" name="Gaslands Refuelled" shortName="Refuelled" publicationDate="2019"/>
   </publications>
   <costTypes>
     <costType id="91a9-beed-6d55-d7ea" name="Cans" defaultCostLimit="-1.0" hidden="false"/>
@@ -19,9 +20,9 @@
     </profileType>
     <profileType id="3418-d4a3-250b-ab45" name="Weapon">
       <characteristicTypes>
-        <characteristicType id="69fc-8560-0644-48e2" name="Type"/>
-        <characteristicType id="c3db-f302-e618-7458" name="Attack"/>
         <characteristicType id="7de6-2500-ebda-e68b" name="Range"/>
+        <characteristicType id="c3db-f302-e618-7458" name="Attack"/>
+        <characteristicType id="f73e-329c-9ced-0585" name="Ammo"/>
         <characteristicType id="a354-1bd0-7431-ae3d" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
@@ -86,6 +87,21 @@
                 <repeat field="selections" scope="b5d8-cf00-181a-b503" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="528f-f0b3-bb2b-8a6a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="b5d8-cf00-181a-b503" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="b5d8-cf00-181a-b503" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Lightweight</characteristic>
@@ -147,10 +163,32 @@
                 <repeat field="selections" scope="94de-e05a-c0db-5fb6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="528f-f0b3-bb2b-8a6a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="94de-e05a-c0db-5fb6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="94de-e05a-c0db-5fb6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="94de-e05a-c0db-5fb6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Heavyweight</characteristic>
-            <characteristic name="Hull Points" typeId="a05d-324a-bd1a-767e">20</characteristic>
+            <characteristic name="Hull Points" typeId="a05d-324a-bd1a-767e">26</characteristic>
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">4</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">5</characteristic>
@@ -193,7 +231,7 @@
             <modifier type="increment" field="6748-870d-e310-84fa" value="1">
               <comment>Expertise</comment>
               <conditions>
-                <condition field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8646-046c-b5df-e06a" type="equalTo">
+                <condition field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
                   <comment>Expertise</comment>
                 </condition>
               </conditions>
@@ -208,6 +246,28 @@
                 <repeat field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
                 <repeat field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89d7-ec4b-86b1-20fc" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8646-046c-b5df-e06a" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="97fe-b03b-81d4-936f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -257,7 +317,7 @@
             <modifier type="increment" field="6748-870d-e310-84fa" value="1">
               <comment>Expertise</comment>
               <conditions>
-                <condition field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8646-046c-b5df-e06a" type="equalTo">
+                <condition field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
                   <comment>Expertise</comment>
                 </condition>
               </conditions>
@@ -272,6 +332,28 @@
                 <repeat field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89d7-ec4b-86b1-20fc" repeats="1" roundUp="false"/>
                 <repeat field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8646-046c-b5df-e06a" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="5fc8-4273-0b18-c611" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -334,6 +416,21 @@
                 <repeat field="selections" scope="b242-a818-85e6-b6db" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="528f-f0b3-bb2b-8a6a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="b242-a818-85e6-b6db" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="b242-a818-85e6-b6db" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Lightweight</characteristic>
@@ -383,6 +480,28 @@
                 <repeat field="selections" scope="c596-f85f-ae8b-fa32" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89d7-ec4b-86b1-20fc" repeats="1" roundUp="false"/>
                 <repeat field="selections" scope="c596-f85f-ae8b-fa32" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="c596-f85f-ae8b-fa32" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="c596-f85f-ae8b-fa32" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="c596-f85f-ae8b-fa32" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -446,6 +565,28 @@
                 <repeat field="selections" scope="c4d1-c411-d2c4-c182" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89d7-ec4b-86b1-20fc" repeats="1" roundUp="false"/>
                 <repeat field="selections" scope="c4d1-c411-d2c4-c182" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="c4d1-c411-d2c4-c182" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="c4d1-c411-d2c4-c182" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="c4d1-c411-d2c4-c182" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -519,6 +660,28 @@
                 <repeat field="selections" scope="de6f-4971-d7ee-d6ea" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="de6f-4971-d7ee-d6ea" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="de6f-4971-d7ee-d6ea" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="de6f-4971-d7ee-d6ea" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -549,13 +712,9 @@
     <selectionEntry id="f964-c263-ff17-1fc5" name="Gyrocopter" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a2d-ea1c-ee35-aa8e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a2d-ea1c-ee35-aa8e" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -585,6 +744,13 @@
                 <repeat field="selections" scope="f964-c263-ff17-1fc5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
                 <repeat field="selections" scope="f964-c263-ff17-1fc5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89d7-ec4b-86b1-20fc" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="f964-c263-ff17-1fc5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -651,6 +817,13 @@
                 <repeat field="selections" scope="93be-e146-d79b-13d6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="93be-e146-d79b-13d6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Heavyweight</characteristic>
@@ -715,6 +888,13 @@
                 <repeat field="selections" scope="5c3b-7e88-5b9a-51cd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="119d-9a90-a1f5-6fe1" repeats="1" roundUp="false"/>
                 <repeat field="selections" scope="5c3b-7e88-5b9a-51cd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89d7-ec4b-86b1-20fc" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="5c3b-7e88-5b9a-51cd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -1022,6 +1202,28 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="1ef7-5239-685e-10a7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="1ef7-5239-685e-10a7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="1ef7-5239-685e-10a7" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Heavyweight</characteristic>
@@ -1082,6 +1284,21 @@
               <repeats>
                 <repeat field="selections" scope="8847-cf34-415b-e9e0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="528f-f0b3-bb2b-8a6a" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="8847-cf34-415b-e9e0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="8847-cf34-415b-e9e0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -1144,6 +1361,21 @@
                 <repeat field="selections" scope="e963-efe5-63a4-a278" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="528f-f0b3-bb2b-8a6a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="e963-efe5-63a4-a278" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="e963-efe5-63a4-a278" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Lightweight</characteristic>
@@ -1205,6 +1437,28 @@
               <comment>Prison Car</comment>
               <conditions>
                 <condition field="selections" scope="6682-7091-0233-0818" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9616-1553-edcf-11ad" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="6682-7091-0233-0818" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="6682-7091-0233-0818" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="6682-7091-0233-0818" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
               </conditions>
             </modifier>
           </modifiers>
@@ -1278,6 +1532,28 @@
                 <repeat field="selections" scope="8f6d-bc80-86c2-2114" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="528f-f0b3-bb2b-8a6a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="increment" field="6748-870d-e310-84fa" value="1">
+              <comment>Expertise</comment>
+              <conditions>
+                <condition field="selections" scope="8f6d-bc80-86c2-2114" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="3c64-20de-b449-9e2a" value="1">
+              <conditions>
+                <condition field="selections" scope="8f6d-bc80-86c2-2114" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31f8-993a-622a-e07c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c64-20de-b449-9e2a" value="2">
+              <conditions>
+                <condition field="selections" scope="8f6d-bc80-86c2-2114" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67db-8127-a7c6-429c" type="equalTo">
+                  <comment>Expertise</comment>
+                </condition>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -1309,7 +1585,9 @@
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="5707-6abb-7abe-9612" name="Options" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="ba54-acdf-648d-86c5" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a0d-4ca7-dc7b-eb21" type="max"/>
+        <constraint field="ba54-acdf-648d-86c5" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a0d-4ca7-dc7b-eb21" type="max">
+          <comment>DO NOT DELETE THIS, THIS IS WHAT MAKES VEHICLE BUILD SLOT RESTRICTIONS WORK</comment>
+        </constraint>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="6998-8ee1-9654-8903" name="Upgrades" hidden="false" collective="false" import="true">
@@ -1360,12 +1638,18 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72ca-72fa-136e-03bd" type="max"/>
+              </constraints>
               <costs>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="1.0"/>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="abea-8bf8-fcfb-b8a1" name="Improved Sludge Thrower" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="218e-2ab7-1852-cf0b" type="max"/>
+              </constraints>
               <costs>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="1.0"/>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
@@ -1395,11 +1679,19 @@
             <selectionEntry id="67db-8127-a7c6-429c" name="Experimental Nuclear Engine" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4f7-0b52-6568-ee8f" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3d2-45ea-0b86-12fe" type="max"/>
+              </constraints>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1408,17 +1700,27 @@
             <selectionEntry id="0925-cc18-b8da-5623" name="Experimental Teleporter" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-1f8e-63b6-95e6" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffe4-631a-7be1-4c49" type="max"/>
+              </constraints>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="7.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4a80-bb42-9564-9009" name="Roll Cage" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd1d-ba51-6626-3110" type="max"/>
+              </constraints>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="1.0"/>
@@ -1458,6 +1760,20 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="2b91-33e6-8d75-f45b" name="Exploding Ram" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4f7-0b52-6568-ee8f" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f72f-0cb4-5553-6bec" type="max"/>
+              </constraints>
               <entryLinks>
                 <entryLink id="897f-2e54-bda5-8750" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
@@ -1575,7 +1891,7 @@
         <entryLink id="89a2-0bf0-1d3d-5237" name="Weapons" hidden="false" collective="false" import="true" targetId="4c53-70ee-8e18-ea38" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="efd0-4e11-81a4-f448" name="Perks" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="efd0-4e11-81a4-f448" name="Driver Perks" hidden="false" collective="false" import="true">
       <selectionEntryGroups>
         <selectionEntryGroup id="b822-bc12-3dc5-5a12" name="Aggression" hidden="true" collective="false" import="true">
           <modifiers>
@@ -2573,6 +2889,16 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="0a51-0e9e-5ac4-ce17" name="Machine Gun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">2D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d"/>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="29b4-45a3-7c49-8a99" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2589,6 +2915,16 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="b790-4174-4182-043a" name="Heavy Machine Gun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">3D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d"/>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="c898-d3bd-e3c5-4998" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2605,6 +2941,16 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="271a-49ef-ccac-68e0" name="Mini-Gun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">4D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d"/>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="4bb1-afe0-03de-86f6" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2621,6 +2967,23 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="25d1-5789-62fe-a9e7" name="125mm Cannon" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <modifiers>
+                <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">8D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Blast. When fired, gain 2 Hazards if not a Tank</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="dff0-f017-8e97-91ec" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2637,6 +3000,23 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="b3ae-8219-8f94-b8b1" name="Rockets" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <modifiers>
+                <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">6D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d"/>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="7654-fbf7-d0ce-9872" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2653,6 +3033,23 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="705d-7ca8-fe68-fb0f" name="Flamethrower" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <modifiers>
+                <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Large Burst</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">6D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Splash. Fire. Indirect</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="6f50-45b4-ea34-86dd" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2669,6 +3066,23 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="dc20-1aae-e9f9-e43f" name="Mortar" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <modifiers>
+                <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">4D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Indirect</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="6411-43a5-2367-d010" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2678,6 +3092,22 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="14a8-4e6a-7ad4-366c" name="BFG" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9b85-b938-b4e6-7e6c" name="BFG" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">10D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="c6bf-fe6b-09fd-f8fa" name="BFG" hidden="false">
+              <description>Front mounted only.
+When fired, the vehicle makes an immediately forced move Medium backwards, reduces Gear to 1, and gains 3 Hazard Tokens.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="3.0"/>
             <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
@@ -2691,6 +3121,16 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="9a16-c346-04a6-79ce" name="Combat Laser" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">3D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Splash</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="e5cf-ae0a-052f-e5dd" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2707,6 +3147,21 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="41de-9a40-62d8-79e6" name="Grabber Arm" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Short</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">3D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">See Rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="59b4-0147-5c28-3fcf" name="Grabber Arm" hidden="false">
+              <description>If this weapon scores one or more un-cancelled hits against a target vehicle of the same weight class or lighter, the controller of the active vehicle may place the target vehicle anywhere withing Short range of hte target vehicle&apos;s orginal position. The target vehicle may be pivoted to face anh direction. This movement triggers a Collision Window. </description>
+            </rule>
+          </rules>
           <entryLinks>
             <entryLink id="a0ef-a722-7a81-c5f3" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2723,6 +3178,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="cd38-b87d-ff0b-6695" name="Harpoon" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">(5D6)</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">See Rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="8377-9914-73d4-f35a" name="Harpoon" hidden="false">
+              <description>Does not cause damage.
+First un-cancelled hit spins target to face directly away from or towards the attacking vehicle, whichever requires smallest degree of rotation.
+Subsequent un-cancelled hits each cause target to make a forced Short towards the attacker.
+If target is heavier than attacker, spin and move attacker towards target instead.</description>
+            </rule>
+          </rules>
           <entryLinks>
             <entryLink id="c8f1-a72a-09ed-e963" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2739,6 +3212,22 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="ea9a-ac88-b77f-9f21" name="Wrecking Ball" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Short</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">*</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">See Rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="ce9c-097d-77ce-e5c4" name="Wrecking Ball" hidden="false">
+              <description>This weapon does not require a target. When fired, this vehicle must immediately engage in a T-Bone Collision with every vehicle and Destructible object within Short range of it, in a 360-degree arc of fire, in any order chosen by this vehicle&apos;s controller.
+During these Collisions, all vehicles count as having no weapons or perks except this one and all other vehicles must declare an Evade reaction. During each of these Collisions this vehicle gains 2 Smash Attack dice. This vehicle does not gain Hazard Toekens during these Collisions. Collisions triggered by the Wrecking Ball do not benefit from upgrades, such as Rams or Exploding Rams.</description>
+            </rule>
+          </rules>
           <entryLinks>
             <entryLink id="5198-5606-15f0-bdb0" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2755,6 +3244,35 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="49fe-c726-5a14-4965" name="Wreck Lobber" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <modifiers>
+                <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dbl/Dropped</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">See Rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="10e0-d236-f4d0-e79e" name="Wreck Lobber" hidden="false">
+              <description>Trebuchet: The Wreck Lobber does not require a target. When fired, place a marker the size of a penny withing Double range of the Wreck Lobber&apos;s fire arc. Roll a Skid Die:
+- On a Shift: place a Car wreck touching the marker and trigger a Collision Window
+- Spin or Slide: the player to the left of the active player places the wreck anywhere within Short range of the marker, trigger a Collision Window.
+- Hazard: the player to the left of the active player places the wreck touching the active vehicle, trigger a Collision Window.
+
+Low-loader: If this vehicle collides with a wreck, it may gain 1 Ammo Token for the Wreck Lobber.
+
+Dumper: The Wreck Lobber may be fired as a rear-mounted dropped weapon. In this case, the wreck of a car is placed touching the rear of the active vehicle, and no Collision Window is triggered.</description>
+            </rule>
+          </rules>
           <entryLinks>
             <entryLink id="394e-0da3-e998-406e" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2771,6 +3289,23 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="6be0-33c4-194e-f486" name="Bazooka" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <modifiers>
+                <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">3D6</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Blast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <entryLinks>
             <entryLink id="06d0-d832-0866-b867" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2780,6 +3315,21 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="cfe3-bc6a-1d73-48f3" name="Wall of Amplifiers" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="846b-f584-417a-a4bd" name="Wall of Amplifiers" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                <characteristic name="Ammo" typeId="f73e-329c-9ced-0585"/>
+                <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">360 arc of fire. See Rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="996e-4817-358c-374c" name="Wall of Amplifiers" hidden="false">
+              <description>This weapon does not require a target. When fired, this weapon automaticallly causes one hit to *every* vehicle within Medium range. These hits do not cause damage and may be Evaded. For each un-cancelled hit on a vehicle, choose one: discard 1 Hazard Token from the vehicle or add 1 Hazard Token to the vehicle.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="3.0"/>
             <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
@@ -2790,48 +3340,144 @@
         <selectionEntryGroup id="90c5-93e3-0b4c-0250" name="Crew Fired Weapons" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="705d-a0d7-3010-e030" name="Grenades" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="0840-176e-4ba3-bfd7" name="Grenades" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">1D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">5</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Blast. Indirect. Blitz.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="783f-f193-91ac-e6e7" name="Molotov Cocktails" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="6e55-6a24-1ce7-9da5" name="Molotov Cocktails" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">1D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">5</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Fire. Indirect. Blitz.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="06ec-198f-d47a-e1d3" name="Gas Grenades" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="8da3-6e92-be11-ed68" name="Gas Grenades" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">(1D6)</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">5</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Indirect. Blitz. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b0c7-313c-5a48-b74c" name="Magnum" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="0d87-1103-40a4-fc4a" name="Magnum" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">1D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Blast.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c98b-934e-96db-d64c" name="Blunderbuss" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="c238-dcab-8df5-b94f" name="Blunderbuss" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Small Burst</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">2D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Splash.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d324-8f39-af95-45d1" name="Steel Nets" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="6663-ee74-6d17-f39c" name="Steel Nets" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Short</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">(3D6)</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Blast. Hits do no damage.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3379-c3b9-bc86-8e90" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="4ed4-7947-4374-4ca3" name="Shotgun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Long</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">*</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired. Attack: 3D6 Short, 2D6 Medium, 1D6 Long</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="56ba-34d9-1f0c-9bb1" name="Submachine Guns" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="56ba-34d9-1f0c-9bb1" name="Handgun" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="598f-11ef-43b3-19e9" name="Handgun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">1D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+                <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8874-d907-a6af-4f28" name="Submachine Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="2924-0068-2a78-7a9a" name="Submachine Gun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">3D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Crew Fired.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2842,6 +3488,30 @@
         <selectionEntryGroup id="e60b-134c-d821-74f9" name="Dropped Weapons" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="0c4d-6773-2a9a-8e0b" name="Caltrop Dropper" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="c6a7-8e08-3342-2399" name="Caltrop Dropper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">2D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Small Burst. Treacherous. Remove after contact.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <entryLinks>
                 <entryLink id="c972-84db-aa29-698a" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2851,6 +3521,29 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="0995-f47b-db4e-b62b" name="Glue Dropper" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="92e2-c6ff-aaeb-5fa7" name="Glue Dropper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Large Burst. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="7089-1cd7-34ba-a48a" name="Glue Dropper" hidden="false">
+                  <description>The template counts as a Treacherous surface. Any vehicle affected by this weapon must recude its current geare by 2 at the end of their Movement Step.
+A single vehicle may not be affected by this weapon 2 activations in a row.</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="e537-c7a1-e894-7581" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2860,6 +3553,30 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="fca3-6cb7-92eb-6a95" name="Mine Dropper" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="a009-df32-f29c-d976" name="Mine Dropper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">4D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Small Burst. Blast. Remove after contact.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <entryLinks>
                 <entryLink id="ff0c-d511-3bed-279c" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2869,6 +3586,40 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="e788-30e0-c54c-e065" name="RC Car Bombs" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="9f4e-d609-8f1d-14b8" name="RC Car Bombs" publicationId="a0bf-31f8-e06a-12f0" page="79" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">4D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="2a39-6ebd-0ede-8843" name="RC Car Bombs" hidden="false">
+                  <description>When attacking, place a RC Car (use a tiny car no larger than 20mm square) so within Short range of the attacking vehicle, facing any direction. THis placement triggers a Collision Window.
+The RC Car counts as a lightweight vehicle in Gear 3 with 1 Hull, 1 Crew, and 0 Handling. It can make shooting attacks but cannot change Gear. 
+The RC Car cannot be used for the purposes of scenario rules, Audience Votes, or perks.
+If the RC Car is involved in a Collision, it suffers one damage before the Collision.
+If the RC Car wipes out, it suffers one damage before the Wipeout is resolved.
+WHen the RC Car would be Wrecked, it instead expolodes, when the RC Car explodes it rolls 4D6 (Blast) attack, as if it were a middleweight vehicle.</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="6c04-afc9-7f6b-58f1" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2878,6 +3629,30 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="35c4-8a3e-b5bb-2ef3" name="Oil Slick Dropper" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="9223-0f07-505b-5358" name="Oil Slick Dropper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Large Burst. Treacherous.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <entryLinks>
                 <entryLink id="4559-5571-b8c9-9044" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2887,6 +3662,30 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="f667-0a1e-efb8-89ce" name="Napalm Dropper" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="4359-8284-0112-602b" name="Napalm Dropper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">4D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Small Burst. Fire. Remove after contact.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <entryLinks>
                 <entryLink id="5f48-b964-4bf8-3823" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2896,6 +3695,38 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="c6f4-331e-f5c3-a784" name="Smoke Dropper" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="3474-9e83-4591-10d7" name="Smoke Dropper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Large Burst. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="7e62-112c-42f3-ba66" name="Smoke Dropper" hidden="false">
+                  <description>This template counts as an obstruction for determining Cover.
+Whilst a vehicle is in contact with this template, that vehicle is Distracted.
+If any part of a vehicle&apos;s movement template or Final Position touches this dropped weapon the vehicle gains 1 Hazard Token at the end of its Movement Step.
+</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="f5b5-aa5f-a5e7-625b" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2905,6 +3736,38 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a466-ffbe-8c20-f5c1" name="Sentry Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="ba54-acdf-648d-86c5" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39da-2a47-c4bf-ba33" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="5393-6fda-a1f2-7bf6" name="Sentry Gun" publicationId="a0bf-31f8-e06a-12f0" page="80" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <modifiers>
+                    <modifier type="increment" field="f73e-329c-9ced-0585" value="1">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6544-f65b-4420-3486" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Dropped</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">2D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">3</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="ac81-b41c-5ca2-c623" name="Sentry Gun" publicationId="a0bf-31f8-e06a-12f0" page="80" hidden="false">
+                  <description>When attacking, place a Sentry Gun within Short range of the attacking vehicle.
+The Sentry Gun remains in play as a lightweight destructible obstacle. They may be targeted with shooting attacks and have 2 Hull.
+The Sentry Gun automatically makes a 2D6 shotting attack against any vehicle that ends their Movement Step within Meidum range of the Sentry Gun in a 360-degree arc of fire. The target may evade as normal. This Sentry Gun will never target vehicles form the team of the vehicle that dropped it.
+The Sentry Gun cannot be used for scenario rules, Audience Votes, and perks.</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="ff94-d9a9-f8ee-e164" name="Mounting" hidden="false" collective="false" import="true" targetId="b72d-7f13-d76f-1460" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2937,6 +3800,22 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile id="bfbb-4438-4060-b644" name="Arc Lightning Projector" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">6D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Electrical. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="f08a-5acf-2d9c-73b4" name="Arc Lightning Projector" hidden="false">
+                  <description>After damaging a target, this vehicle *must* immediately attack another target within Short range and 360-degree arc of fire of the current target (including this vehicle). 
+This continues until the weapon fails to damage a target, or there are no further viable targets. This vehicle can target friendly vehicles with the Arc Lightning Projector. This vehicle cannot target the same vehicle twice in a single Attack Step with the Arc Lightning Projector.</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="3631-75a3-ccc1-9615" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2958,6 +3837,21 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile id="ab2f-98d3-bdd2-3bee" name="Death Ray" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">3D6</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Electrical. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="09fc-8ab5-c5a6-a485" name="Death Ray" hidden="false">
+                  <description>If this weapon scores 5 or more un-cancelled hits on the target during a single attack, instead of causing damage, the target car is immediately removed from play (it counts as being Wrecked for Audience votes, scenario rules, etc.).</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="6d6b-5017-aef5-0153" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
@@ -2979,6 +3873,22 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile id="6fa6-bf71-8157-ea97" name="Grav Gun" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">(3D6)</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Electrical. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="b043-024a-4b07-8d27" name="Grav Gun" hidden="false">
+                  <description>If this weapon scores one or more un-cancelled hits on the target, instead of causing damage the attacking vehicle&apos;s controller choses to make the target vehicle&apos;s weight class one heavier or one weight class lighter until the target&apos;s next activation.
+ </description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="1f4e-76ad-2ad2-630c" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
@@ -3000,6 +3910,21 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile id="f613-cfe7-cad0-299c" name="Kinetic Super Booster" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">(6D6)</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Electrical. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="4c93-e503-4d25-93d1" name="Kinetic Super Booster" hidden="false">
+                  <description>The target of a Super Booster attack suffers no damage, but instead immediately increases its current Gear by one for every successful hit, without gaining Hazard Tokens. The Super Booster may not increase a vehicle&apos;s current Gear beyond its Max Gear.</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="0fb9-b367-796d-2726" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
@@ -3021,6 +3946,16 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile id="13fe-20d7-fed1-0e0e" name="Magnetic Jammer" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Double</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">-</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Electrical. Target may not discard Ammo tokens during its next activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <entryLinks>
                 <entryLink id="81d9-ae25-1649-51a6" name="Mounting" hidden="false" collective="false" import="true" targetId="fa58-967b-5455-6fde" type="selectionEntryGroup"/>
               </entryLinks>
@@ -3037,6 +3972,21 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile id="27c9-256d-6036-c0bd" name="Thumper" hidden="false" typeId="3418-d4a3-250b-ab45" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="7de6-2500-ebda-e68b">Medium</characteristic>
+                    <characteristic name="Attack" typeId="c3db-f302-e618-7458">-</characteristic>
+                    <characteristic name="Ammo" typeId="f73e-329c-9ced-0585">1</characteristic>
+                    <characteristic name="Special Rules" typeId="a354-1bd0-7431-ae3d">Electrical. Indirect. 360deg. See Rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="2bcb-f5f7-362d-4ff3" name="Thumper" hidden="false">
+                  <description>When this vehicle declares an attack with the Thumper, every other vehicle (friend or foe) within Medium range of this vehicle immediately makes a Flip check, in which they count their current Gear as 2 higher, up to a maximum of 6.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="2.0"/>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
