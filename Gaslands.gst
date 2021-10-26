@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="20" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="21" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="55c7-45e5-pubEL3DK" name="TX3"/>
     <publication id="a0bf-31f8-e06a-12f0" name="Gaslands Refuelled" shortName="Refuelled" publicationDate="2019"/>
@@ -30,6 +30,11 @@
       <characteristicTypes>
         <characteristicType id="2a59-5864-b3f9-0c30" name="Build Slots"/>
         <characteristicType id="5304-47e4-12bd-5efe" name="Special Rules"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="f1ab-4fe6-1435-77a2" name="Perk">
+      <characteristicTypes>
+        <characteristicType id="358e-0a9f-333a-7c1b" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1912,6 +1917,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="823d-50d0-ed2c-2934" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="5f6a-c01b-ee21-801d" name="Battlehammer" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When making a Smash Attack, this vehicle gains +1 attack die for each Hazard Token it currently has.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1921,6 +1933,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ddc-eb22-b3f4-1d90" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="fd17-10c9-4fd6-3ae8" name="Double-Barrelled" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During the Attack Step, up to 3 weapons with the Cre Fired rule may gain +1 bonus to hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1930,6 +1949,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9bd-7b0d-19e0-9954" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="9aa9-ddb6-f0d0-4ff0" name="Boarding Party" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle ignore the Distracted rule, meaning this vehicle may attack during the attack step even if touching an obstacle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1939,6 +1965,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f47-bace-5027-f37a" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="d736-2262-d00a-a629" name="Murder Tractor" publicationId="a0bf-31f8-e06a-12f0" page="121" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle may make piledriver attacks, like a War Rig</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1948,6 +1981,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="339b-9dd7-5742-6218" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="123a-53d3-4ba1-7086" name="Terrifying Lunatic" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Whenever a vechicle controlled by another player ends its Movement Step within SHort range of this vehicle, the active vehicle gains a Hazard Token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1957,6 +1997,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7efc-f78a-b5c3-fd18" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e797-29d6-a451-9c05" name="Grinderman" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Before rolling attack dice in a Smash Attack, this vehicle may choose to add 1 Hazard Token to the target vehicle for each point of damage it inflicts, instead of removing Hull Points.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1983,6 +2030,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4c9-f21b-96b4-4c80" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="4cce-c786-cfd7-636c" name="Satellite Navigation" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle resolves its Skid Dice, this vehicle&apos;s controller may set aside 1 Shift result. This vehicle may have any number of Shift results set aside. Any vehicle in this team may use these set aside Shift results during a later Movement Step, as if they had rolled them in that Movement Step.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -1992,6 +2046,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eae6-9ca4-be34-df42" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e624-8b83-b0c0-e50e" name="Whizbang" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the start of each game, this vehicle gains a random Speed perk. This perk is lost at the end of the game.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2001,6 +2062,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a446-a95c-c3ad-fb1d" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="d047-2627-810d-c459" name="Rocket Thrusters" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle is moved as part of a Flip, it may choose to use the Long Straight, Veer, or Gentle templates instead of the Medium Straight template.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2010,6 +2078,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d797-d5f6-cccc-c77c" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="cc16-435a-7b2e-eb8b" name="Mobile Mechanic" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per activation, at the start of the Attack Step, this vehicle may temporarily reduce its Crew Value by one, once, until the end of the Attack Step. If it does, this vehicle gains 1 Hull point, which may not take its Hull Points above the vehicle&apos;s Hull value.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2019,6 +2094,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0572-7ec6-5a76-fadd" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ac9c-b281-7552-f099" name="Gyroscope" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the start of each game, this vehicle gains a random Daring perk. This perk is lost at the end of the game.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2028,6 +2110,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="573a-4bae-cb04-be16" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="8924-88bc-c46f-97f1" name="Eureka!" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per game, at the start of its Attack Step, this vehicle&apos;s controller may declare any weapon that this vehicle has not attacked with yet this game. This vehicle counts as being armed with the declared weapon, on a facing of their choice, for the next attack only.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2055,6 +2144,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9da4-6550-faae-4e86" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="d80c-50a8-af63-2626" name="Downshift" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the end of a Movement Step in which this vehicle changed down one or more Gears, this vehicle may make a forced move Short Straight forward.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2064,6 +2160,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69d5-b434-ba99-6e4b" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e7ff-56f4-63f2-d071" name="Hell For Leather" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle considers Long Straight to be permitted in any Gear. The Long Straight is not considered either Hazardous or Trivial in any Gear.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2073,6 +2176,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43d4-6e52-0f72-b04a" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="a211-ab20-78dc-b8fb" name="Overload" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When resolving Skid Dice during the Movement Step, this vehicle may roll one additional Skid Die. If it does, it must change up at least one Gear or gain a Hazard Token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2082,6 +2192,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d96a-6de1-1265-fb8e" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ebda-9d00-cf79-6e42" name="Slipstream" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If this vehicle is involved in a tailgate Collision during its activation, this vehicle may declare a Slipstream reaction. If they do, the other vehicle may not declare a reaction. If this vehicle declares a Slipstream reaction, this vehicle may change up or down one Gear and gains a Hazard Token. Neither vehicle gains Hazard Tokens as a result of this Collision.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2091,6 +2208,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ba9-ad83-ed59-6c02" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="eb2d-c2e5-28d6-7500" name="Time Extended!" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the end of a Movement Step in which this vehicle passes a race gate, this vehicle may remove any number of Hazard Tokens.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2100,6 +2224,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b8a-32e7-57ac-e0e7" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="f0ec-b389-f281-3b75" name="Hot Start" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Roll a D6 at the start of the game. This vehicle starts the game in that Gear. Re-roll if this would put the current Gear of the vehicle above its Max Gear.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2126,6 +2257,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afb8-6e36-a66a-7dbc" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="352b-3f88-4746-f847" name="Restraint" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle would gain a Hazard Token for shifting *down* a gear, this vehicle may remove one Hazard Token instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2135,6 +2273,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fcc-d4f3-8930-860a" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="227f-ab7b-f835-950d" name="Moment of Glory" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per game, after rolling the Skid Dice, but before resolving the results, this vehicle may change any number of Skid Dice to any results they choose.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2144,6 +2289,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4545-d414-76a9-f615" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="bd9b-657a-5b98-ab96" name="Trick Driving" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle may select a movement template as if its current Gear was one higher or one lower.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2153,6 +2305,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="733b-7874-1787-ebe4" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="8300-7d1e-7b18-c7b2" name="Expertise" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle adds 1 to its Handling Value.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2162,6 +2321,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="926d-0c7f-2c56-e157" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="6213-c3ba-7981-9a57" name="Easy Rider" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">ONce per round, this vehicle may discaard one rolled Skid Dice result before applying the results.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2171,6 +2337,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c933-4ece-d998-9f0e" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="a6dd-136a-f7e0-59b2" name="Mister Fahrenheit" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle cannot gain more than 2 Hazard Tokens from Collisions during a single activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2197,6 +2370,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b39-f6ca-9b84-3c30" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="6561-5392-8ed9-e896" name="Return Fire" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per Gear Phase, if this vehicle is the target of a shooting attack, this vehicle may take 2 Hazard Tokens to immediately attack, as if it was this vehicle&apos;s Attack Step.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2206,6 +2386,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55d5-5f3c-85fe-5ba4" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="f58c-2009-ef83-b862" name="Rapid Fire" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per round, after attacking with a weapon, this vehicle may resolve an additional Attack Step in which it may only attack with that weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2215,6 +2402,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3341-1d00-3a7d-0bfc" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="a1e0-dd6f-cc52-bcfd" name="Loader" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the start of its Attack Step, this vehicle may temporarily reduce its Crew Value by one, once, until the end of the Attack Step, to gain a +1 bonus to hit with a single weapon. Critical Hits still only occur on the natural roll of 6.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2224,6 +2418,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6481-dbc2-3899-54d2" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="6941-0da6-1d1d-c5b4" name="Headshot" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When making a shooting attack, this vehicle&apos;s Critical Hits inflict 3 hits instead of the normal 2 hits.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2233,6 +2434,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="101f-a3ca-ca3b-3d39" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="0a47-6298-b8f2-89f8" name="Fully Loaded" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If a shooting weapon on this vehicle has 3 or more Ammo Tokens remaining before discarding an Ammo Token to attack, that weapon gains +1 attack die.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2242,6 +2450,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38d3-fea9-2910-00de" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="2219-3180-e938-ed76" name="Dead-Eye" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During this vehicle&apos;s Attack Step, this vehicle gains +1 bonus to hit if making a shooting attack at a target within Double range and not within Medium range. Critical Hits still only occur on the natural roll of 6.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2267,6 +2482,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3393-a8e7-5c28-3854" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="5f1d-be28-371b-6e68" name="Chrome-Whisperer" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle may Push It any number of times during a single Movement Step, gaining 1 Hazard Token each time.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2276,6 +2498,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b63-a5a5-ab4b-ef4a" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="27b4-6295-bbb3-43bf" name="Hand Brake Artist" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When applying a Spin result, this vehicle may choose to face *any* direction.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
@@ -2285,6 +2514,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc6e-17c6-d115-a857" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="9c7f-dd5a-2127-657f" name="Stunt Driver" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This perk may only be taken on a lightweight or middleweight vehicle type with a base handling of 3 or more. This vehicle may choose to ignore any number of obstructions in its Movement Step. After any Movement Step in which this vehicle chose to ignore any obstructions using this ability, this vehicle immediately gains 3 Hazard Tokens</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="7.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2294,6 +2530,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7df0-c745-2d94-ccb9" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="abd9-0dc4-5a63-79eb" name="Slippery" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Vehicles making a Smash Attack targeting this vehicle suffer a penalty of -2 attack dice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2303,6 +2546,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="070c-625d-0d74-e79e" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="6237-34e2-d227-4a51" name="Powerslide" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle may use any template except the Long Straight instead of the Slide template when applying a Slide result. s with the step 1.1 of Movement Step, you must use the first movement template you touch. Treat teh selected movement template as a slide template for purposes of finding the vehicle&apos;s Final Position.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2312,6 +2562,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffcf-fb2e-cc97-114e" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ca9e-2cfd-6e30-bb3d" name="Evasive" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Before making an Evade Roll, this vehicle may gain any number of Hazard Tokens to add +1 to each of their Evade dice per Hazard Token gained. A roll of &quot;1&quot; on an Evade die always counts as a failure.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2338,6 +2595,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2ba-8935-0b81-9b02" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="d42a-496e-6871-0726" name="Road Warrior" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per activation, if this vehicle has cause one or more hits on an enemy vehicle at any point during this activation, this vehicle may remove a Hazard Token at the end of its Attack Step.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2347,6 +2611,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="969d-ea71-45ab-f895" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="73b6-7ef4-601d-0f1d" name="Powder Keg" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">THis vehicle may add 1 to its explosion check. Treat this vehicle as one weight-class heavier when it explodes. This bonus *does* apply during resolution of the Fireworks perk.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2356,6 +2627,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="499f-7eb0-6f5b-6658" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="0d3e-c45b-7867-03b7" name="Madman" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the end of this vehicle&apos;s Movement Step, if it has 4 or more Hazard Tokens, it may remove a Hazard Token and place it on another vehicle within Medium range.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2365,6 +2643,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ee5-9f23-b834-02f9" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="4864-c61a-9ce3-680a" name="Bullet Time" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During its Movement Step, if this vehicle resolves a Slide result, it may select one of its weapons to count as Turret-mounted for the rest of the activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2374,6 +2659,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="056a-40ef-2154-d552" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="8d0a-6db0-e8bf-f894" name="Crowd Pleaser" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If this vehicle wipes out, gain 1 Audience Vote.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2383,6 +2675,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1395-08a6-1c1d-6aa0" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e157-87cc-c93d-18f2" name="Cover Me" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once during its activation, this vehicle may remove a Hazard Token and place it on another friendly vehicle within Double range.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2410,6 +2709,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eea4-b0d8-d320-7aa2" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="938d-f5fb-af88-6d06" name="Rear Drive" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle may pivot about the centre of its front edge, rather than the centre of the vehicle when resolving Spin results.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2419,6 +2725,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eab-a98e-fba0-5954" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="4680-8634-4a80-c882" name="Delicate Touch" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle ignores the hazard icons on movement templates.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2428,6 +2741,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8550-cb3c-b049-6567" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="8fc4-6b18-32cd-d965" name="Purring" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle does not gain more than 1 Hazard Token from Spin results each activation. This vehicle does not gain more than 1 Hazard Token from Slide results each activation. This vehicle does not gain more than 1 Hazard Token from Hazard results each activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2437,6 +2757,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="160e-16d6-5929-48bf" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="1a8b-104e-43bc-b605" name="Skiing" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If this vehicle has Handling 3 or higher, this vehicle may take 3 Hazard Tokens at the end of its Movement Step to be ignored by other vehicles during their Movement Steps until the start of this vehicle&apos;s next activation. If by ignoring this vehicle in this way a vehicle&apos;s Final Position would overlap it, move that vehicle backwards along their movement template by the minimum amount to avoid overlapping any obstruction.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="6.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2446,6 +2773,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8715-bdaf-b089-ed5e" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="48eb-d27b-1c84-5308" name="Momentum" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When resolving Skid Dice, this vehicle may set aside a Slide or Spin result to re-roll a Skid Die. This effect may be used multiple times. Skid Dice that are set aside must be resolved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2455,6 +2789,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d23b-1622-ae90-a5e8" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="f3a1-0a03-1dd9-686d" name="Fenderkiss" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle makes a Smash Attack, it suffers a penalty of -2 attack dice. Vehicles making a Smash Attack targeting this vehicle suffer a penalty of -2 attack dice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2481,6 +2822,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3b3-3a08-0ba1-7425" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="d528-30ea-4498-fbbb" name="On Your Tail" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When an enemy vehicle resolves a Spin or Slide move that ends within Short range of this vehicle, that enemy vehicle gains 1 Hazard Token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2490,6 +2838,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe3b-d298-9468-610b" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="8ad5-e8e3-0719-f0a0" name="Taunt" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the start of this vehicle&apos;s Attack Step, roll a Skid Die. If you roll something other than a Shift result, you may place that Skid Dice result onto the dashboard of another target vehicle within Short range. This Skid Dice result must be resolved during that vehicle&apos;s next Movement Step, and may not be re-rolled. The Skid Die may be cancelled with a shift as usual.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2499,6 +2854,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6d9-0773-7024-949d" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="7ff9-3909-387d-a57e" name="Schadenfreude" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If another vehicle wipes out within Short range of this vehicle (before or after any Flip), remove all Hazard Tokens from this vehicle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2508,6 +2870,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="315c-8cf6-b4d9-a8e1" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ce7d-c090-cf03-90ea" name="PIT" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During this vehicle&apos;s activation, if this vehicle is involved in a non-head-on Collision with an enemy vehicle, it may declare a PIT as its reaction, targeting the enemy vehicle, instead of a Smash Attack or an Evade. If this vehicle declares a PIT, it may select any movement template the target vehicle considers Hazardous in its current Gear. Immediately after the resolution of this Collision, the target vehicle&apos;s controller must make a forced move directly forward using the selected movement template. A PIT cannot be evaded. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2517,6 +2886,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d86d-4a9e-db94-1ad1" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ca2f-596c-54db-cb49" name="Unnerving Eye Contact" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Enemy vehicles within Short range of this vehicle may not use Shift results to remove Hazard Tokens from their dashboard.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2526,6 +2902,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4888-44ff-0c61-3ced" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e18e-924e-a1fa-aa9f" name="Out Run" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the start of this vehicle&apos;s Attack Step, all vehicles within Short range of this vehicle and in a lower current Gear than this vehicle gain 1 Hazard Token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2553,6 +2936,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7181-9c48-6c37-8869" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e3be-72d2-e601-c4af" name="Bigger&apos;N You" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If this vehicle is in a Collision, double any Smash Attack bonuses or penalties resulting from weight differences during that Collision.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2562,6 +2952,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d152-d1ff-dcf4-7c19" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ba4d-5659-29c7-e872" name="Drive Angry" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At teh start of this vehicle&apos;s activation, this vehicle gains 1 Hazard Token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2571,6 +2968,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4b2-9d71-6983-b3cb" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="c8ee-f008-f517-92a4" name="Don&apos;t Come Knocking" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At teh start of this vehicle&apos;s activation, it may gain 4 Hazard Tokens. If it does, this vehicle cannot gain or lose any Hazard Tokens by any means until the start of its next activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2580,6 +2984,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78f1-2d41-a495-f05e" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="458a-bc26-71c5-85b2" name="Beerserker" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle would suffer damage outside of its activation, reduce that damage by 1, to a minimum of 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2589,6 +3000,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c79c-d920-9a8c-e0d7" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="3a23-b182-1fb4-510d" name="In for a Penny" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">If this vehicle has gained 6 or more Hazard Tokens during this activation, it may double the attack dice of any Smash Attack it makes for the remainder of this activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2598,6 +3016,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efc4-8c58-c4fd-5c2c" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="0eed-1a89-9c47-db6f" name="Hog Wild" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During a Collision resolved during a Wipeout Step, this vehicle gains +2 Smash Attack dice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2624,6 +3049,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd1-36a7-57ee-a3b8" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="2f03-bf83-4791-d8a2" name="Ecstatic Visions" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per activation, at the start of this vehicle&apos;s activation, this vehicle may gain up to 3 Hazard Tokens to discard that many Hazard Tokens from a friendly vehicle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2633,6 +3065,15 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8872-ff38-ffbe-ef77" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="e5f1-c35c-3964-a6b4" name="Highway to Hell" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">At the end of its Movement Step, if this vehicle selected a straight template, this vehicle may suffer 2 damage with the Fire rule. If any Hull Points are removed by this effect, this vehicle may leave its movement template (ignoring any Slide template) in play as a Napalm dropped weapon template. Remove this template at the start of this vehicle&apos;s next activation. 
+
+Napalm: Dropped, 4D6 Fire attack, remove this template after it affects a vehicle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2642,6 +3083,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c8c-dd4f-2d69-4116" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="95ff-7fb8-54fc-e079" name="Sympathy for the Devil" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle makes an evade check, its controller may select a friendly vehicle within Medium range. Add teh current Gear of the selected vehicle to this vehicle&apos;s current Gear for the purposes of this evade check. Both the selected vehicle and this vehicle suffer any unsaved damage from this attack, including any additional effects.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2651,6 +3099,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a869-c048-082b-e095" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="45bf-9b7f-f906-c501" name="Purifying Flames" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per activation, at the start of this vehicle&apos;s ativation, this vehicle may suffer up to 3 Fire damage to remove the same amount of damage from a friendly vehicle. This damage may not be reduced (including by Oot Inferno&apos;s &quot;Fire Walk With Me&quot; perk). This effect may not raise a vehicle above its starting Hull value.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="1.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2660,6 +3115,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bb7-c00f-d86f-eef4" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="d144-92b3-8b2e-bfd5" name="Angel of Death" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Before making an attack, this vehicle may suffer up to 3 damage to add that many attack dice to a single weapon used in this attack.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2669,6 +3131,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a616-855d-397e-449a" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="8bc1-f250-73aa-de92" name="Violent Manifestation" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle is respawned, make an immediate attack (with attack dice based on the weight of the respawned vehicle) against every other vehicle within Medium range as if this vehicle was an exploding wreck. This explosion counts as having both the Blast and Fire rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="3.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2696,6 +3165,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0133-7658-afb7-11d8" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="ca9f-d62b-cffc-ddf7" name="Barrel Roll" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">When this vehicle suffers a Flip, it may choose to place the Flip template touching the centre of any edge and perpendicular to that edge, instead of the front edge as normal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2705,6 +3181,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7eaa-325a-5407-e1f0" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="1b45-75f8-ee69-eef1" name="Bruiser" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">In a Collision involving this vehicle, if this vehicle declares a reaction other than Evade against an enemy vehicle, the enemy vehicle immediately gains one Hazard Token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="4.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2714,6 +3197,14 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69b6-8d17-220d-4e5f" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="005e-e8f3-1e0f-5f22" name="Crusher" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">This vehicle gains the Up and Over rule: During this vehicle&apos;s Movement Step, after resolving a Collision with an obstruction of a lower weight class, this vehicle may declare that it is going &quot;Up and Over&quot;. If it does, it may ignore the obstruction for the remainder of its Movement Step. This vechicle cannot use this ability to ignore another vehicle with the Up and Over rule.
+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="7.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2723,6 +3214,14 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8d4-eaa1-3b4f-0c44" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="7e1e-6760-4df4-c583" name="Splashback" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">Once per step, when this vehicle loses one or more Hull Points, make a 1D6 attack against each vehicle within Medium range at the end of that step.
+(Per FAQ, this attack does not target this vehicle)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="5.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2732,6 +3231,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3243-821c-ce12-0988" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="a193-b6ae-22a4-c677" name="Dead Weight" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During this vehicle&apos;s Attack Step, this vehicle may gain 2 Hazard Tokens to count as one weight-class heavier (unless already heavyweight) until the start of its next activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="2.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -2741,6 +3247,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0ac-c802-487b-6bb2" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="5e38-c69f-be78-d202" name="Feel No Pain" hidden="false" typeId="f1ab-4fe6-1435-77a2" typeName="Perk">
+                  <characteristics>
+                    <characteristic name="Description" typeId="358e-0a9f-333a-7c1b">During an enemy vehicle&apos;s Attack Step, after an attacker has rolled all their attack dice against this vehicle, if the attacks caused a total of 2 or fewer uncancelled hits, cancel all remaining hits.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="8.0"/>
                 <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
@@ -3995,6 +4508,86 @@ This continues until the weapon fails to damage a target, or there are no furthe
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0b41-570c-e1cc-d4ac" name="Mounting (Trailer)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b473-4ee4-c7ce-0484" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41a3-2f77-a1a7-eb62" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="e154-3eb4-c658-4da8" name="Cab Front" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="688b-d54a-b799-c141" name="Cab Side" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c278-f7c9-d402-5278" name="Cab Rear" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ceb7-b683-963d-d2ad" name="Cab Turret (Cans x3)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9153-3768-2e17-d56e" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b91-33e6-8d75-f45b" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cab3-e726-e8b2-6ffe" name="Trailer Front" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="697e-f7f7-3385-f2f8" name="Trailer Rear" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6d9e-b9b2-15bc-a4f3" name="Trailer Side" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="abf2-a82b-d112-e3e3" name="Trailer Turret (Cans x3)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9153-3768-2e17-d56e" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b91-33e6-8d75-f45b" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+            <cost name="Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </gameSystem>
