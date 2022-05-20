@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="23" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="24" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="55c7-45e5-pubEL3DK" name="TX3"/>
     <publication id="a0bf-31f8-e06a-12f0" name="Gaslands Refuelled" shortName="Refuelled" publicationDate="2019"/>
@@ -16,6 +16,7 @@
         <characteristicType id="6748-870d-e310-84fa" name="Handling"/>
         <characteristicType id="3c64-20de-b449-9e2a" name="Max Gear"/>
         <characteristicType id="4fe3-cc78-baa4-a7ad" name="Crew"/>
+        <characteristicType id="2e81-f353-ccec-4cb9" name="Build Slots"/>
       </characteristicTypes>
     </profileType>
     <profileType id="3418-d4a3-250b-ab45" name=" Weapon">
@@ -114,6 +115,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">5</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">6</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">1</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">1</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -197,6 +199,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">4</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">5</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -287,6 +290,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">3</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">8</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -376,6 +380,11 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -383,6 +392,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">3</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">5</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">2</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -464,6 +474,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">4</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">6</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">2</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -474,7 +485,7 @@
       <entryLinks>
         <entryLink id="3c6e-fdb3-7345-4ebd" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2"/>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="2.0"/>
           </modifiers>
         </entryLink>
         <entryLink id="9c69-5770-7fd6-34c3" name="Perks" hidden="false" collective="false" import="true" targetId="efd0-4e11-81a4-f448" type="selectionEntryGroup"/>
@@ -529,6 +540,16 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="3">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36d8-6a63-8ac4-d919" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Heavyweight</characteristic>
@@ -536,6 +557,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">3</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">4</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">2</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -624,6 +646,11 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -631,6 +658,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">4</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">6</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">1</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -723,6 +751,11 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -730,6 +763,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">4</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">3</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -798,6 +832,11 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -805,6 +844,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">4</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">6</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">1</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">0</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -816,7 +856,7 @@
       <entryLinks>
         <entryLink id="99cd-eec7-a819-5646" name="Options" hidden="false" collective="false" import="true" targetId="5707-6abb-7abe-9612" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="0"/>
+            <modifier type="set" field="0a0d-4ca7-dc7b-eb21" value="0.0"/>
             <modifier type="increment" field="0a0d-4ca7-dc7b-eb21" value="1.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
@@ -882,6 +922,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">3</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">4</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">3</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">4</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -957,6 +998,16 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="3">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36d8-6a63-8ac4-d919" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Heavyweight</characteristic>
@@ -964,6 +1015,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">4</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">3</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">3</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">4</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1295,6 +1347,16 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="3">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36d8-6a63-8ac4-d919" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Heavyweight</characteristic>
@@ -1302,6 +1364,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">3</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">4</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1388,6 +1451,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">4</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">6</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">1</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1464,6 +1528,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">5</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">6</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">2</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1542,6 +1607,11 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -1549,6 +1619,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">4</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">2</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1640,6 +1711,11 @@
                 </condition>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2e81-f353-ccec-4cb9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e44a-e5fc-d07b-86c5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Weight" typeId="4efa-dfe3-7fb1-23fa">Middleweight</characteristic>
@@ -1647,6 +1723,7 @@
             <characteristic name="Handling" typeId="6748-870d-e310-84fa">2</characteristic>
             <characteristic name="Max Gear" typeId="3c64-20de-b449-9e2a">5</characteristic>
             <characteristic name="Crew" typeId="4fe3-cc78-baa4-a7ad">3</characteristic>
+            <characteristic name="Build Slots" typeId="2e81-f353-ccec-4cb9">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
