@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="22" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="55c7-45e5-b4ec-d17c" name="Gaslands" revision="23" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="55c7-45e5-pubEL3DK" name="TX3"/>
     <publication id="a0bf-31f8-e06a-12f0" name="Gaslands Refuelled" shortName="Refuelled" publicationDate="2019"/>
@@ -1685,6 +1685,10 @@
           </modifiers>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name=" Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
+        <cost name=" Cans" typeId="91a9-beed-6d55-d7ea" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -1970,7 +1974,7 @@
                 <cost name=" Build Slots" typeId="ba54-acdf-648d-86c5" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="36d8-6a63-8ac4-d919" name="Heavyweight Trailer" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="36d8-6a63-8ac4-d919" name="Heavyweight Trailer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
